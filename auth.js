@@ -1,30 +1,3 @@
-const LOGGED_IN_KEY = 'isLoggedIn';
-
-function checkSignInState() {
-    return localStorage.getItem(LOGGED_IN_KEY) === 'true';
-}
-
-function logInUser() {
-    // Sets the state to 'true' in the browser's local storage
-    localStorage.setItem(LOGGED_IN_KEY, 'true');
-    // Redirects to the main content page
-    window.location.href = 'home.html'; 
-}
-
-function logOutUser() {
-    // Sets the state to 'false'
-    localStorage.setItem(LOGGED_IN_KEY, 'false');
-    // Redirects back to the login page (the new entry point)
-    window.location.href = 'login.html'; 
-}
-
-// This will redirect the user to the login page if they are not logged in
-if (window.location.pathname === '/login.html' && checkSignInState()) {
-    window.location.href = 'home.html';  // Redirect logged-in user to the homepage
-}
-
-
-
 // Toggle forms
 const signInBtn = document.getElementById('signInBtn');
 const signUpBtn = document.getElementById('signUpBtn');
@@ -85,6 +58,4 @@ signInForm.addEventListener('submit', (e) => {
         message.style.color = 'red';
         message.textContent = 'Invalid username or password.';
     }
-});
-
-    
+});z
