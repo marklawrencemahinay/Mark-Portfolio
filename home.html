@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarkLawrence Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+    <nav class="navbar">
+        <div class="logo">Ma<span>rk</span></div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+        </ul>
+
+        <div class="right-buttons">
+            <a href="#contact" class="contact-btn">Contact Me</a>
+            <a href="login.html" class="log-out">Log Out</a>
+        </div>
+    </nav>
+</header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+        <div class="hero-text">
+            <p class="hi">Hi</p>
+            <h1>I'm <span>MarkLawrence</span><br>an Aspiring Web Developer</h1>
+            <p class="description">
+                Passionate about creating clean, responsive, and user-friendly websites.
+                I love turning ideas into functional designs and continuously improving
+                my skills as I grow in the field of web development.
+            </p>
+
+            <div class="btn-group">
+                <a class="btn black-btn" href="#contact">Hire Me</a>
+            </div>
+        </div>
+
+        <div class="hero-img">
+            <img src="pic.jpg" alt="profile photo">
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <h2>About Me</h2>
+            <p class="about-text">
+                I'm <span>Mark Lawrence Mahinay</span>, 18 years old and currently a 
+                first-year student at <span>Caraga State University - Cabadbaran Campus (CSUCC)</span>.
+                I am taking the course <span>Bachelor of Science in Information Technology (BSIT)</span>
+                and aspiring to become a skilled web developer.
+            </p>
+        </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills" class="skills">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">
+                <p>HTML</p>
+            </div>
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                <p>Python</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2>Contact Me</h2>
+            <p class="contact-text">
+                Have a project in mind or want to work with me?  
+                Feel free to send a message!
+            </p>
+
+            <form class="contact-form">
+                <div class="input-group">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                </div>
+
+                <textarea placeholder="Your Message..." required></textarea>
+
+                <button type="submit" class="contact-btn-send">Send Message</button>
+            </form>
+
+            <div class="social-links">
+                <a href="https://facebook.com/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+                </a>
+                <a href="https://instagram.com/" target="_blank">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <script src="auth.js"></script>
+<script>
+// Redirect if NOT logged in
+if (!checkSignInState() && !window.location.pathname.includes("login.html")) {
+    window.location.href = "login.html";
+}
+</script>
+
+</html>
